@@ -13,8 +13,6 @@ _______________________________________________________________________
 
 The Singleton design pattern is a creational design pattern that ensures the existence of only one instance of a class in an application. It restricts the instantiation of a class to a single object, providing global access to that object.
 
-Here's a brief overview of the Singleton design pattern:
-
 Intent:
 The Singleton pattern aims to control the instantiation process of a class and guarantee that only one instance of the class exists throughout the application.
 
@@ -44,6 +42,41 @@ Overall, the Singleton pattern provides a way to ensure a single instance of a c
 _______________________________________________________________________
 
 1.2 FactoryMethod
+
+![FactoryMethod](https://github.com/amr11mahmoud/DesignPatterns/assets/53308603/eadb1f41-ec1b-4543-a577-0f4df8598760)
+
+(image source: https://refactoring.guru/design-patterns/factory-method)
+
+The Factory Method design pattern is a creational design pattern that provides an interface for creating objects but delegates the instantiation logic to subclasses. It allows a class to defer the instantiation of objects to its subclasses.
+
+Here's a brief overview of the Factory Method design pattern:
+
+Intent:
+The Factory Method pattern aims to provide a way for creating objects without specifying their exact classes. It promotes loose coupling by relying on subclasses to determine the object creation process.
+
+Motivation:
+In some scenarios, a class cannot anticipate the exact type of objects it needs to create. Rather than tightly coupling the class to specific concrete classes, the Factory Method pattern introduces an abstract method for creating objects, which subclasses can override to provide their own implementation.
+
+Implementation:
+To apply the Factory Method pattern, you generally follow these steps:
+
+Define an abstract base class that declares the factory method. This method serves as the interface for creating objects but does not provide a concrete implementation.
+Create concrete subclasses that inherit from the base class. Each subclass provides its own implementation of the factory method, instantiating specific objects.
+Client code invokes the factory method through the abstract base class, without knowing the exact class of the created object.
+At runtime, the appropriate subclass is instantiated based on the context or configuration, and the client code receives an object without being aware of the specific subclass.
+Benefits:
+The Factory Method pattern offers several advantages, including:
+
+Flexible object creation: It allows for flexible object creation by deferring the responsibility to subclasses. New classes can be added without modifying existing client code.
+Encapsulation: The object creation logic is encapsulated within the subclasses, promoting encapsulation and separation of concerns.
+Extensibility: The Factory Method pattern supports the addition of new product types or variations by introducing new subclasses.
+Drawbacks:
+While the Factory Method pattern has its benefits, it also has some drawbacks to consider:
+
+Complexity: The pattern introduces additional complexity by requiring the definition of multiple classes, which might not be necessary in simpler scenarios.
+Increased number of classes: Introducing subclasses for each product type can lead to an increased number of classes in the codebase, potentially making it more difficult to manage.
+Overall, the Factory Method pattern provides a flexible way to create objects without tightly coupling client code to concrete classes. It enables extensibility and encapsulation, making it suitable for scenarios where object creation is dynamic or varies based on certain conditions.
+_______________________________________________________________________
 1.3 ProtoType
 1.4 Builder
 
