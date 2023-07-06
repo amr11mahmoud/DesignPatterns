@@ -1,5 +1,6 @@
 ﻿using Builder;
 
+//
 SmartFactory factory = new SmartFactory();
 
 SmartSwitch smartSwitch = new SmartSwitch();
